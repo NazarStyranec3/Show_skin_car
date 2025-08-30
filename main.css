@@ -1,0 +1,234 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Додаємо фон для основного контенту, який не зливається з шапкою і підвалом */
+main {
+  flex: 1 0 auto;
+  background: linear-gradient(120deg, #000000 0%, #5e0b0b 50%, #000000 100%);
+  box-shadow: 0 0 32px 0 rgba(0,0,0,0.08) inset;
+  position: relative;
+  z-index: 1;
+}
+
+.main-wrapper {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+
+.header-content, .footer-content {
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Додаємо відступи для тексту в main */
+.main-content, .main-content-left, .main-content-right {
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .main-content, .main-content-left, .main-content-right {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  background: #000000;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  color: #ffffff;
+}
+
+.red-stripe {
+  height: 4px;
+  background: #d32f2f;
+  width: 100%;
+}
+
+.footer-left, .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header-content img {
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.header-content {
+  gap: 16px; 
+  background: #000000;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.header-content {
+  color: #821802;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.imgs {
+  background-color: #1f1c1c;
+}
+.imgs img {
+  max-width: 500px !important;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.content-text {
+  color: #ffffff;
+}
+
+/* --- Десктоп: фото і текст в рядок --- */
+.img_left, .img_right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.img_left {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.img_right {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.img_right .text-content {
+  align-items: flex-start;
+  text-align: left;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.img_left .text-content {
+  align-items: flex-end;
+  text-align: right;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.content-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.content-list li {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 0;
+  background: none;
+  border: none;
+}
+
+.content-text {
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.img_left img, .img_right img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: block;
+}
+
+.img_right img {
+  margin-left: 0;
+}
+
+.img_left img {
+  margin-right: 0;
+}
+
+/* --- Мобільний: фото завжди зверху, текст завжди під фото --- */
+@media (max-width: 700px) {
+  .img_left, .img_right {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 16px;
+  }
+  .img_left img, .img_right img {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 12px 0 !important; /* фото зверху, текст під фото */
+    display: block;
+    order: 0;
+  }
+  .img_left .text-content,
+  .img_right .text-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center !important;
+    align-items: center !important;
+    margin: 0;
+    order: 1;
+  }
+  /* Примусово порядок: img завжди перший, текст завжди другий */
+  .img_left img, .img_right img {
+    order: 0;
+  }
+  .img_left .text-content, .img_right .text-content {
+    order: 1;
+  }
+  .content-list {
+    padding-left: 16px;
+    text-align: center;
+    display: inline-block;
+  }
+}
