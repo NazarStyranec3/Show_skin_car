@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nazarstyranec3.github.io/Show_skin_car/sitemap.xml
