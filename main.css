@@ -197,7 +197,7 @@ main {
 }
 
 /* --- Мобільний: фото завжди зверху, текст завжди під фото --- */
-@media (max-width: 100px) {
+@media (max-width: 700px) {
   .img_left, .img_right {
     flex-direction: column !important;
     align-items: center;
