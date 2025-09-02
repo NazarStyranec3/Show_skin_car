@@ -8,24 +8,26 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #a6a6a6;
 }
 
 /* Додаємо фон для основного контенту, який не зливається з шапкою і підвалом */
 main {
   flex: 1 0 auto;
-  background: linear-gradient(120deg, #000000 0%, #5e0b0b 50%, #000000 100%);
-  box-shadow: 0 0 32px 0 rgba(0,0,0,0.08) inset;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 0 32px 0 rgb(0, 0, 0) inset;
   position: relative;
   z-index: 1;
 }
-
 .main-wrapper {
-  position: sticky;
-  top: 0;
+  position: relative;
   width: 100%;
   z-index: 100;
+  padding: 20px;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
+  background-color: #a6a6a6;
+  border-radius: 0 0 30px 30px;
 }
 
 .header-content, .footer-content {
@@ -36,6 +38,9 @@ main {
   justify-content: space-between;
 }
 
+.main-content{
+  padding: 30px;
+}
 /* Додаємо відступи для тексту в main */
 .main-content, .main-content-left, .main-content-right {
   padding-left: 32px;
@@ -53,11 +58,12 @@ main {
 .footer {
   width: 100%;
   margin-top: auto;
-  background: #000000;
+  background: #a6a6a6;
   position: relative;
   bottom: 0;
   left: 0;
-  color: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.36) inset;
 }
 
 .red-stripe {
@@ -72,17 +78,9 @@ main {
   gap: 4px;
 }
 
-.header-content img {
-  max-width: 160px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
 
 .header-content {
   gap: 16px; 
-  background: #000000;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -101,7 +99,9 @@ main {
 }
 
 .imgs {
-  background-color: #1f1c1c;
+  background-color: #a6a6a6;
+  padding: 20px;
+  
 }
 .imgs img {
   max-width: 500px !important;
@@ -109,9 +109,11 @@ main {
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 30px;
+  box-shadow: 32px 32px 32px 32px rgb(0, 0, 0) inset;
 }
 .content-text {
-  color: #ffffff;
+  color: #000000;
 }
 
 /* --- Десктоп: фото і текст в рядок --- */
@@ -134,6 +136,7 @@ main {
 }
 
 .text-content {
+  font-size: 1.25rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -163,26 +166,34 @@ main {
 }
 
 .content-list li {
-  color: #ffffff;
-  font-size: 1rem;
+  color: #000000;
+  font-size: 1.3rem;
   line-height: 1.6;
-  margin-bottom: 8px;
+  margin-bottom: 16px; /* збільшено відступ між елементами */
   padding-left: 0;
   background: none;
   border: none;
 }
 
 .content-text {
-  color: #ffffff;
+  color: #000000;
   margin: 0;
   line-height: 1.6;
+  font-size: 1.9rem;
+  /* Можна збільшити ще більше, наприклад font-size: 1.3rem; */
 }
-
+.content-text-p{
+  color: #000000;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1.3rem;
+  /* Можна збільшити ще більше, наприклад font-size: 1.3rem; */
+}
 .img_left img, .img_right img {
-  max-width: 220px;
+  max-width: 280px;
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 30px;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   display: block;
