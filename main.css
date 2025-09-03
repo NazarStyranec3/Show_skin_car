@@ -51,13 +51,11 @@ main {
   gap: 8px;
 }
 
-
 @media (max-width: 600px) {
   .main-wrapper .header-text-overlay {
-    flex-direction: column;
-    gap: 8px;
-    left: 8px;
-    top: 8px;
+    gap: 22px;
+    left: 1px;
+    top: 1px;
     padding: 6px 8px;
     font-size: 1rem;
   }
