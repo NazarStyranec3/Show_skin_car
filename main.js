@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   rightArrow.style.right = '10px';
   // Видаляємо задній фон стрілок
   leftArrow.style.background = rightArrow.style.background = 'transparent';
-  leftArrow.style.color = rightArrow.style.color = '#fff';
+  leftArrow.style.color = rightArrow.style.color = '#00000';
   leftArrow.style.border = rightArrow.style.border = 'none';
   leftArrow.style.fontSize = rightArrow.style.fontSize = '2rem';
   leftArrow.style.cursor = rightArrow.style.cursor = 'pointer';
