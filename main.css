@@ -37,7 +37,7 @@ main {
   font-size: 1.3rem;
   font-weight: 600;
   z-index: 101;
-  pointer-events: none; /* щоб текст не заважав клікам по зображенню */
+  pointer-events: auto; /* дозволяємо кліки */
   letter-spacing: 0.5px;
   display: flex;
   flex-direction: row;
@@ -49,6 +49,17 @@ main {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.main-wrapper .header-text-overlay a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-wrapper .header-text-overlay a:hover {
+  color: #ffd700;
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
