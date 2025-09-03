@@ -14,7 +14,7 @@ body {
 /* Додаємо фон для основного контенту, який не зливається з шапкою і підвалом */
 main {
   flex: 1 0 auto;
-  background: rgb(255, 255, 255);
+  background: #FDFCF8;
   position: relative;
   z-index: 1;
 }
