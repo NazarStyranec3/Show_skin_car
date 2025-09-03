@@ -51,16 +51,6 @@ main {
   gap: 8px;
 }
 
-.main-wrapper .header-text-overlay a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.main-wrapper .header-text-overlay a:hover {
-  color: #ffd700;
-  text-decoration: underline;
-}
 
 @media (max-width: 600px) {
   .main-wrapper .header-text-overlay {
